@@ -52,9 +52,9 @@ function App() {
 
   if (!isInitialized) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-primary-500 via-secondary-500 to-purple-600 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-pink-500 to-purple-600 flex items-center justify-center">
         <div className="text-center text-white">
-          <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse-slow">
+          <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
             <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
               <span className="text-2xl">🎵</span>
             </div>
