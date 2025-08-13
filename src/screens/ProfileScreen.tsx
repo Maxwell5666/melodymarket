@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { User, Album } from '../types';
+import { User, Album } from '../types/index.js';
 import { User as UserIcon, Music, Download, Upload, Settings, TrendingUp, Wallet, BarChart3 } from 'lucide-react';
-import StorageService from '../services/StorageService';
+import StorageService from '../services/StorageService.js';
 
 const ProfileScreen: React.FC = () => {
   const [currentUser, setCurrentUser] = useState<User | null>(null);

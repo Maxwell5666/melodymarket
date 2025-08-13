@@ -1,5 +1,5 @@
 import React from 'react';
-import { Album } from '../types';
+import { Album } from '../types/index.js';
 import { ShoppingCart, Music, Clock, CheckCircle, Download } from 'lucide-react';
 
 interface AlbumCardProps {
