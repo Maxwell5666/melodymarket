@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { User } from './types';
-import BottomNavBar from './components/BottomNavBar.js';
-import DiscoverScreen from './screens/DiscoverScreen.js';
-import LibraryScreen from './screens/LibraryScreen.js';
-import UploadScreen from './screens/UploadScreen.js';
-import ProfileScreen from './screens/ProfileScreen.js';
-import StorageService from './services/StorageService.js';
+import BottomNavBar from './components/BottomNavBar';
+import DiscoverScreen from './screens/DiscoverScreen';
+import LibraryScreen from './screens/LibraryScreen';
+import UploadScreen from './screens/UploadScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import StorageService from './services/StorageService';
 
 function App() {
   const [currentTab, setCurrentTab] = useState('discover');
