@@ -5,7 +5,6 @@ import DiscoverScreen from './screens/DiscoverScreen';
 import LibraryScreen from './screens/LibraryScreen';
 import UploadScreen from './screens/UploadScreen';
 import ProfileScreen from './screens/ProfileScreen';
-import StorageService from './services/StorageService';
 
 function App() {
   const [currentTab, setCurrentTab] = useState('discover');
@@ -18,16 +17,18 @@ function App() {
 
   const initializeApp = async () => {
     try {
-      await StorageService.init();
-      const user = await StorageService.getCurrentUser();
-      
-      if (!user) {
-        await StorageService.setCurrentUser('Music Lover', 'user@melodymarket.com');
-        const newUser = await StorageService.getCurrentUser();
-        setCurrentUser(newUser);
-      } else {
-        setCurrentUser(user);
-      }
+      const user: User = {
+        id: Date.now().toString(),
+        name: 'Music Lover',
+        email: 'user@melodymarket.com',
+        isArtist: false,
+        purchasedTracks: [],
+        following: [],
+        followers: [],
+        balance: 0,
+        createdAt: new Date(),
+      };
+      setCurrentUser(user);
     } catch (error) {
       console.error('Error initializing app:', error);
     } finally {

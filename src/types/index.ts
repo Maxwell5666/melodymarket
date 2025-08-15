@@ -5,8 +5,6 @@ export interface User {
   isArtist: boolean;
   profileImage?: string;
   purchasedTracks: string[];
-  purchasedAlbums: string[];
-  downloadedAlbums: string[];
   following: string[];
   followers: string[];
   bio?: string;
@@ -24,7 +22,6 @@ export interface Track {
   duration: string;
   fileUrl?: string;
   previewUrl?: string;
-  albumId?: string;
   trackNumber: number;
   price: number;
   isFree: boolean;
@@ -35,28 +32,6 @@ export interface Track {
   createdAt: Date;
   tags: string[];
   isDownloaded: boolean;
-}
-
-export interface Album {
-  id: string;
-  title: string;
-  artistId: string;
-  artistName: string;
-  price: number;
-  coverImageUrl: string;
-  tracks: Track[];
-  createdAt: Date;
-  genre: string;
-  description: string;
-  isDownloaded: boolean;
-}
-
-export interface Purchase {
-  id: string;
-  userId: string;
-  albumId: string;
-  purchaseDate: Date;
-  price: number;
 }
 
 export interface Analytics {
