@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Track, Album } from '../types/index.js';
+import { Track, Album } from '../types';
 import { Play, Pause, SkipBack, SkipForward, Volume2, Heart, Shuffle, Repeat } from 'lucide-react';
-import AudioService from '../services/AudioService.js';
 
 interface MusicPlayerProps {
   album: Album;

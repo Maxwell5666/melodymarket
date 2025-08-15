@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { User, Album, Track } from '../types/index.js';
+import { User, Album, Track } from '../types';
 import { CloudUpload, Image, Music, Plus, X, Info } from 'lucide-react';
-import StorageService from '../services/StorageService.js';
 
 const UploadScreen: React.FC = () => {
   const [currentUser, setCurrentUser] = useState<User | null>(null);

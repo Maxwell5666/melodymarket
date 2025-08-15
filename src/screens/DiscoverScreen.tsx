@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Album, User } from '../types/index.js';
+import { Album, User } from '../types';
 import { Search, Bell, TrendingUp, Star } from 'lucide-react';
-import AlbumCard from '../components/AlbumCard.js';
-import StorageService from '../services/StorageService.js';
 
 const DiscoverScreen: React.FC = () => {
   const [albums, setAlbums] = useState<Album[]>([]);

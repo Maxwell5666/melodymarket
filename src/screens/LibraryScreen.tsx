@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Album } from '../types/index.js';
+import { Album } from '../types';
 import { Download, Library, Music } from 'lucide-react';
-import AlbumCard from '../components/AlbumCard.js';
-import StorageService from '../services/StorageService.js';
 
 const LibraryScreen: React.FC = () => {
   const [purchasedAlbums, setPurchasedAlbums] = useState<Album[]>([]);
